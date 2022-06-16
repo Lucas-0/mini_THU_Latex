@@ -5,7 +5,6 @@
 \documentclass[a4paper, 12pt, centering]{article}
 
 
-
 % ===========================页面设置===============================================
 \usepackage{geometry}   %设置页边距的宏包
 \geometry{left=2.5cm,right=2cm,top=2.5cm,bottom=2.5cm}  %设置 上、左、下、右 页边距
@@ -37,16 +36,7 @@
 
 % ===========================中文字体支持===============================================
 % 字体需要根据自己电脑系统来设置
-\usepackage{xeCJK}
-\setmainfont{Times New Roman}
-\setCJKmainfont{宋体}
-
-\setCJKfamilyfont{zhhei}{黑体}
-\newcommand*{\hei}{\CJKfamily{zhhei}}
-\setCJKfamilyfont{zhkai}{楷体}
-\newcommand*{\kai}{\CJKfamily{zhkai}}
-\setCJKfamilyfont{enroman}{Times New Roman}
-\newcommand*{\mytimes}{\CJKfamily{enroman}}
+\usepackage[UTF8]{ctex}
 
 
 
@@ -77,9 +67,9 @@
 
 % ===========================定义摘要、关键词、章节等命令===============================================
 \makeatletter
-\renewcommand\abstract{%
-\kai\textbf{\hei{摘要：}}
-{\normalfont\xiaosihao\kai}}
+\renewcommand\abstract{
+\textbf{{摘要：}}
+{\normalfont\xiaosihao}}
 \makeatother
 
 \newenvironment{enabstract}
@@ -87,7 +77,7 @@
 \makeatletter
 \renewcommand\enabstract{%
 \textbf{Abstract: }
-{\normalfont\xiaosihao\mytimes}}
+{\normalfont\xiaosihao}}
 \makeatother
 
 %%%% 设置 key words 属性 %%%%
@@ -95,8 +85,8 @@
 
 \makeatletter
 \renewcommand\keys{%
-\kai\textbf{\hei{关键词：}}
-{\normalfont\xiaosihao\hei}}
+\textbf{{关键词：}}
+{\normalfont\xiaosihao}}
 \makeatother
 
 \newenvironment{enkeys}
@@ -104,7 +94,7 @@
 \makeatletter
 \renewcommand\enkeys{%
 \textbf{Key words: }
-{\normalfont\xiaosihao\mytimes}}
+{\normalfont\xiaosihao}}
 \makeatother
 
 %%%% 设置 section 属性 %%%%
@@ -112,7 +102,7 @@
 \renewcommand\section{\@startsection{section}{1}{\z@}%
 {-1.5ex \@plus -.5ex \@minus -.2ex}%
 {.5ex \@plus .1ex}%
-{\normalfont\sihao\bf\hei}}
+{\normalfont\sihao\bf}}
 \makeatother
 
 %%%% 设置 subsection 属性 %%%%
@@ -120,7 +110,7 @@
 \renewcommand\subsection{\@startsection{subsection}{1}{\z@}%
 {-1.25ex \@plus -.5ex \@minus -.2ex}%
 {.4ex \@plus .1ex}%
-{\normalfont\xiaosihao\bf\hei}}
+{\normalfont\xiaosihao\bf}}
 \makeatother
 
 %%%% 设置 subsubsection 属性 %%%%
@@ -128,7 +118,7 @@
 \renewcommand\subsubsection{\@startsection{subsubsection}{1}{\z@}%
 {-1ex \@plus -.5ex \@minus -.2ex}%
 {.3ex \@plus .1ex}%
-{\normalfont\xiaosihao\hei}}
+{\normalfont\xiaosihao}}
 \makeatother
 
 %%%% 段落首行缩进两个字 %%%%
