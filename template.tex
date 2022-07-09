@@ -46,7 +46,7 @@
 \usepackage{bm} % $\bm{letter}$ 数学式中粗斜体字母的最佳方案
 \usepackage{calc}
 \usepackage{units} %单位宏包
-
+\usepackage{cite}
 
 
 % ===========================字号===============================================
@@ -127,10 +127,6 @@
 \@afterindenttrue
 \makeatother
 \setlength{\parindent}{2em}  %中文缩进两个汉字位
-
-
-
-
 
 
 %%%% 定理类环境的定义 %%%%
@@ -230,12 +226,12 @@ keyword1, keyword2, keyword3
 \newpage
 
 \section{第一节}
-吴恩达1976年出生于伦敦，父亲是一位香港医生，英文名叫Andrew Ng，吴恩达年轻时候在香港和新加坡度过。
+吴恩达1976年出生于伦敦\cite{cn1}，父亲是一位香港医生，英文名叫Andrew Ng，吴恩达年轻时候在香港和新加坡度过\cite{en2}\cite{en3}。
 
 \subsection{第一节第一小节}
 1992年吴恩达就读新加坡莱佛士书院，并于1997年获得了卡内基梅隆大学的计算机科学学士学位。之后他在1998年获得了麻省理工学院的硕士学位，并于2002年获得了加州大学伯克利分校的博士学位，并从这年开始在斯坦福大学工作。他（2002年）住在加利福尼亚州的帕洛阿尔托。
 
-文献\cite{1}\cite{2}叙述了。
+文献叙述了\cite{en1}。
 
 % \subsection{图片}
 % 图\ref{Fig.main}如下所示：
@@ -263,9 +259,11 @@ Sarah Brightman& 002& Female\\
 \label{tab.main}
 \end{table}
 
-\begin{thebibliography}{1}
-\bibitem{1} Wray J, Green G G R. Neural networks, approximation theory, and finite precision computation[J]. Neural networks, 1995, 8(1): 31-37.
-\bibitem{2} Ham F M, Kostanic I. Principles of neurocomputing for science and engineering[M]. McGraw-Hill Higher Education, 2000.
-\end{thebibliography}
+\bibliographystyle{IEEEtran}
+\bibliography{reference} 
+% \begin{thebibliography}{1}
+% \bibitem{1} Wray J, Green G G R. Neural networks, approximation theory, and finite precision computation[J]. Neural networks, 1995, 8(1): 31-37.
+% \bibitem{2} Ham F M, Kostanic I. Principles of neurocomputing for science and engineering[M]. McGraw-Hill Higher Education, 2000.
+% \end{thebibliography}
 
 \end{document}
