@@ -198,6 +198,7 @@
 \let\newpage\relax% Void the actions of \newpage
 \maketitle
 \endgroup
+\thispagestyle{empty}
 \newpage
 %----------
 
@@ -219,11 +220,14 @@ Here is English abstract. Here is English abstract. Here is English abstract. He
 \begin{enkeys}
 keyword1, keyword2, keyword3
 \end{enkeys}
+\thispagestyle{empty}
 \newpage
 
 %% 目录 %%%
 \tableofcontents
+\thispagestyle{empty}
 \newpage
+\setcounter{page}{1}
 
 \section{第一节}
 吴恩达1976年出生于伦敦\cite{cn1}，父亲是一位香港医生，英文名叫Andrew Ng，吴恩达年轻时候在香港和新加坡度过\cite{en2}\cite{en3}。
